@@ -38,8 +38,8 @@ Our data has 20 columns with the description as follows:
 ## Building our model
 To built our machine learning model we chose to use the SciKit Learn library and the StatsModels library
 
-<div><a href="scikit-learn.org"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="Scikit Learn" width="35%" align="left"/></a>
-<a href="www.statsmodels.org"><img src="https://www.statsmodels.org/stable/_static/statsmodels_hybi_banner.png" alt="StatsModels" width="65%" align="right"/></a></div>
+<div><a href="scikit-learn.org"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="Scikit Learn" width="30%" align="left"/></a>
+<a href="www.statsmodels.org"><img src="https://www.statsmodels.org/stable/_static/statsmodels_hybi_banner.png" alt="StatsModels" width="60%" align="right"/></a></div>
 <br><br><br><br><br><br
 
 ## Answering our initial questions
