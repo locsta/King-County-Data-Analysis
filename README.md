@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Project King County Data Analysis
 ======
 
@@ -40,3 +41,6 @@ Our data has 20 columns with the description as follows:
 
 ## Answering our initial questions
 
+=======
+# Update readme file
+>>>>>>> fcb16c82b35751fbb4953493bacefc18cfc28fbc
