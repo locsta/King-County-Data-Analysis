@@ -1,15 +1,16 @@
 # Project King County Data Analysis
 
 
-## Defining our objectives:
-We are consultants hired by realtor company to analyse the house data in KC and provide recommendations on their next investment strategy and the kind of prices that they can command.
+## Our objectives are defined as follow:
+We are consultants hired by realtor company to analyse the house data in King County and provide recommendations on their next investment strategy and the kind of prices that they can command.
+
 Here are the questions we'll try to answer:
 1. Can we predict the price of a house based on its location and features?
 2. What are the most impactful factors (features) on the price?
-------
 
 ## Data Cleaning Process
-In order to prepare our dataset to be used for machine learning we will use libraries such as **pandas**, **numpy**, **seaborn** and **matplotlib** to format and normalize our data.
+Our data are located in the **"kc_house_data.csv"** file.
+In order to prepare our dataset to be used for machine learning we will use libraries such as **pandas**, **numpy**, **matplotlib** and **seaborn** to format and normalize our data in our **Jupyter file "index.ipynb"**
 
 Our data has 20 columns with the description as follows:
 * id			- unique identified for a house
@@ -33,10 +34,14 @@ Our data has 20 columns with the description as follows:
 * long			- Longitude coordinate
 * sqft_living15		- The square footage of interior housing living space for the nearest 15 neighbors
 * sqft_lot15		- The square footage of the land lots of the nearest 15 neighbors
-------
 
 ## Building our model
+To built our machine learning model we chose to use the SciKit Learn library and the StatsModels library
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png "Scikit Learn")
+
+![alt text](https://www.statsmodels.org/stable/_static/statsmodels_hybi_banner.png "StatsModels")
 
 ## Answering our initial questions
+Finally we'll present our findings in our "Slides" folder
 
-=======
