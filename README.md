@@ -38,9 +38,9 @@ Our data has 20 columns with the description as follows:
 ## Building our model
 To built our machine learning model we chose to use the SciKit Learn library and the StatsModels library
 
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png "Scikit Learn" =200x40)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="Scikit Learn" width="200"/>
 
-![alt text](https://www.statsmodels.org/stable/_static/statsmodels_hybi_banner.png "StatsModels" =200x40)
+<img src="https://www.statsmodels.org/stable/_static/statsmodels_hybi_banner.png" alt="StatsModels" width="200"/>
 
 ## Answering our initial questions
 Finally we'll present our findings in our "Slides" folder
