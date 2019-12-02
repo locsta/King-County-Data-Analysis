@@ -39,9 +39,18 @@ Our data has 20 columns with the description as follows:
 ## Building our model
 To built our machine learning model we chose to use the SciKit Learn library and the StatsModels library
 <br><br>
+
 <div><a href="https://scikit-learn.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="Scikit Learn" width="30%" align="left"/></a>
 <a href="https://www.statsmodels.org/"><img src="https://www.statsmodels.org/stable/_static/statsmodels_hybi_banner.png" alt="StatsModels" width="60%" align="right"/></a></div>
-<br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+In order to use those libraries we transform *bedrooms*, *bathrooms*, *floors*, *waterfront*, *view*, *condition* and *grade* columns into categorical columns.</br>
+
+We observe that the _price_ doesn't follow a normal distribution. It is right skewed.<br>
+We create a column *log_price* using the numpy function log() to transform prices to a log scale that will be better fitted for machine learning.<br>
+Then we use the **LabelEncoder** method from **sklearn.preprocessing** to normalize the values for those columns and dropped *price*,*zipcode*,*lat* and *long* columns.<br>
+Finally we can run the Ordinary Least Squares (OLS) method from statsmodels.api with the target **y** being the **log_price** column and **X** being our **features** columns.<br>
+All our predictors have a P value < 0.05, they rejected the null hypothesis and are therefore meaningful predictors.<br>
 
 ## Answering our initial questions
 1. Can we predict the price of a house based on its location?<br/>
