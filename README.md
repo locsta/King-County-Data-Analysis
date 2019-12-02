@@ -5,12 +5,13 @@
 We are consultants hired by realtor company to analyse the house data in King County and provide recommendations on their next investment strategy and the kind of prices that they can command.
 
 Here are the questions we'll try to answer:
-1. Can we predict the price of a house based on its location and features?
+1. Can we predict the price of a house based on its location?
 2. What are the most impactful factors (features) on the price?
 
 ## Data Cleaning Process
 Our data are located in the **"kc_house_data.csv"** file.
-In order to prepare our dataset to be used for machine learning we will use libraries such as **pandas**, **numpy**, **matplotlib** and **seaborn** to format and normalize our data in our **Jupyter file "index.ipynb"**
+In order to prepare our dataset to be used for machine learning we are using python libraries such as **pandas**, **numpy**, **matplotlib** and **seaborn** to format and normalize our data.
+This is done in our **Jupyter file "index.ipynb"** file.
 
 Our data has 20 columns with the description as follows:
 * id			- unique identified for a house
@@ -37,11 +38,30 @@ Our data has 20 columns with the description as follows:
 
 ## Building our model
 To built our machine learning model we chose to use the SciKit Learn library and the StatsModels library
-
+<br><br>
 <div><a href="https://scikit-learn.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="Scikit Learn" width="30%" align="left"/></a>
 <a href="https://www.statsmodels.org/"><img src="https://www.statsmodels.org/stable/_static/statsmodels_hybi_banner.png" alt="StatsModels" width="60%" align="right"/></a></div>
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
 ## Answering our initial questions
-Finally we'll present our findings in our **"Slides"** folder
+1. Can we predict the price of a house based on its location?<br/>
+  > We can show a heat maps to the realtor company in order to help them chose the best location for their project.<br/>
+  > Here are the 3 different heat maps we created:
+    * Price as per location
+    * Price per sqft lot as per location
+    * Price per sqft living as per location
+  > <br/>_You will find the heat maps in the Jupyter notebook and also in the slides folder._
+
+2. Can we predict the price of a house based on its location and features?<br/>
+  > Our model scores a r2 of 0.816, meaning that 81,6% of the variation in price is predicted by features.<br/>
+  > Ranking from highest to lowest impact on the prices are the following features:
+  * 1. grade
+  * 2. sqft_living
+  * 3. zip_mean_price
+  * 4. sqft_living15 
+  * 5. sqft_above 
+  * 6. bathrooms
+
+## Presenting our findings to the Realtor company
+In the **"Slides"** folder you can find the presentation of our findings to the realtor company
 
