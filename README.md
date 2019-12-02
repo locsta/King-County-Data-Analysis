@@ -47,9 +47,9 @@ To built our machine learning model we chose to use the SciKit Learn library and
 In order to use those libraries we transform *bedrooms*, *bathrooms*, *floors*, *waterfront*, *view*, *condition* and *grade* columns into categorical columns.</br>
 
 We observe that the _price_ doesn't follow a normal distribution. It is right skewed.<br>
-We create a column *log_price* using the numpy function log() to transform prices to a log scale that will be better fitted for machine learning.<br>
-Then we use the **LabelEncoder** method from **sklearn.preprocessing** to normalize the values for those columns and dropped *price*,*zipcode*,*lat* and *long* columns.<br>
-Finally we can run the Ordinary Least Squares (OLS) method from statsmodels.api with the target **y** being the **log_price** column and **X** being our **features** columns.<br>
+We create a column *log_price* using the numpy function log() to transform prices to a log scale that will be better fitted for machine learning.</br>
+Then we use the **LabelEncoder** method from **sklearn.preprocessing** to normalize the values for those columns and drop *price*,*zipcode*,*lat* and *long* columns.</br>
+Finally we can run the Ordinary Least Squares (OLS) method from statsmodels.api with the target **y** being the **log_price** column and **X** being our **features** columns.</br>
 All our predictors have a P value < 0.05, they rejected the null hypothesis and are therefore meaningful predictors.<br>
 
 ## Answering our initial questions
@@ -61,16 +61,17 @@ All our predictors have a P value < 0.05, they rejected the null hypothesis and 
     * Price per sqft living as per location
   > <br/>_You will find the heat maps in the Jupyter notebook and also in the slides folder._
 
-2. Can we predict the price of a house based on its location and features?<br/>
+2. Can we predict the price of a house based and features?<br/>
   > Our model scores a r2 of 0.816, meaning that 81,6% of the variation in price is predicted by features.<br/>
   > Ranking from highest to lowest impact on the prices are the following features:
   * 1. grade
   * 2. sqft_living
-  * 3. zip_mean_price
+  * 3. zip\_mean_price
   * 4. sqft_living15 
   * 5. sqft_above 
   * 6. bathrooms
+  > Using only those 6 features for our model would give us a r2 of 0.776 which is nearly as good as the precedent model but a lot more flexible.</br>
 
 ## Presenting our findings to the Realtor company
-In the **"Slides"** folder you can find the presentation of our findings to the realtor company
+<a href="https://docs.google.com/presentation/d/1fiWHrEDXgNAzFV6xIbLRCp-XWDJjh-3yyQ32P3ClCtg/edit?usp=sharing">Here is the link to our presentation to the realtor company</a>
 
