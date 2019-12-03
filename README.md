@@ -48,7 +48,7 @@ To built our machine learning model we chose to use the SciKit Learn library and
 In order to use those libraries we transform *bedrooms*, *bathrooms*, *floors*, *waterfront*, *view*, *condition* and *grade* columns into categorical columns.</br>
 
 We observe that the _price_ doesn't follow a normal distribution. It is right skewed.<br>
-We create a column *log_price* using the numpy function log() to transform prices to a log scale that will be better fitted for machine learning.</br>
+We create a column *log_price* using the numpy log() function to transform prices to a log scale that will be better fitted for machine learning.</br>
 Then we use the **LabelEncoder** method from **sklearn.preprocessing** to normalize the values for those columns and drop *price*,*zipcode*,*lat* and *long* columns.</br>
 Finally we can run the Ordinary Least Squares (OLS) method from statsmodels.api with the target **y** being the **log_price** column and **X** being our **features** columns.</br>
 The model shows that the *bedrooms* feature has a P value of 0.52 so we chose to drop the feature from our model.<br>
