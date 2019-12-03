@@ -4,7 +4,7 @@
 ## Our objectives are defined as follow:
 We are consultants hired by a realtor company to analyse the house data in King County and provide recommendations on their next investment strategy and the kind of prices that they can command.
 
-They are asking us the following questions:
+They ask us the following questions:
 1. Can you show us a map of the prices in different areas of Seattle's King County?
 2. What are the most impactful features on the price?
 3. Can we predict the price of a house based on its most important features?
