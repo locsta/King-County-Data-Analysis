@@ -2,16 +2,17 @@
 
 
 ## Our objectives are defined as follow:
-We are consultants hired by realtor company to analyse the house data in King County and provide recommendations on their next investment strategy and the kind of prices that they can command.
+We are consultants hired by a realtor company to analyse the house data in King County and provide recommendations on their next investment strategy and the kind of prices that they can command.
 
-Here are the questions we'll try to answer:
-1. Can we predict the price of a house based on its location?
-2. What are the most impactful factors (features) on the price?
+They are asking us the following questions:
+1. Can you show us a map of the prices in different areas of Seattle's King County?
+2. What are the most impactful features on the price?
+3. Can we predict the price of a house based on its most important features?
 
 ## Data Cleaning Process
 Our data are located in the **"kc_house_data.csv"** file.
 In order to prepare our dataset to be used for machine learning we are using python libraries such as **pandas**, **numpy**, **matplotlib** and **seaborn** to format and normalize our data.
-This is done in our **Jupyter file "index.ipynb"** file.
+This is done in the Jupyter file **"Module 1 Final Project - King County Houses Data Analysis.ipynb"** file.
 
 Our data has 20 columns with the description as follows:
 * id			- unique identified for a house
@@ -50,10 +51,12 @@ We observe that the _price_ doesn't follow a normal distribution. It is right sk
 We create a column *log_price* using the numpy function log() to transform prices to a log scale that will be better fitted for machine learning.</br>
 Then we use the **LabelEncoder** method from **sklearn.preprocessing** to normalize the values for those columns and drop *price*,*zipcode*,*lat* and *long* columns.</br>
 Finally we can run the Ordinary Least Squares (OLS) method from statsmodels.api with the target **y** being the **log_price** column and **X** being our **features** columns.</br>
-All our predictors have a P value < 0.05, they rejected the null hypothesis and are therefore meaningful predictors.<br>
+The model shows that the *bedrooms* feature has a P value of 0.52 so we chose to drop the feature from our model.<br>
+This first model achieve an r-squared of 81.4%<br>
+We then built two other models more useful for our client using only the top 3 and top 2 features<br>
 
 ## Answering our initial questions
-1. Can we predict the price of a house based on its location?<br/>
+1. Can you show us a map of the prices in different areas of Seattle's King County?<br>
   > We can show a heat maps to the realtor company in order to help them chose the best location for their project.<br/>
   > Here are the 3 different heat maps we created:
     * Price as per location
@@ -61,16 +64,15 @@ All our predictors have a P value < 0.05, they rejected the null hypothesis and 
     * Price per sqft living as per location
   > <br/>_You will find the heat maps in the Jupyter notebook and also in the slides folder._
 
-2. Can we predict the price of a house based and features?<br/>
-  > Our model scores a r2 of 0.816, meaning that 81,6% of the variation in price is predicted by features.<br/>
+2. What are the most impactful features on the price?<br>
+  > Our first model scores a r2 of 0.814, meaning that 81,4% of the variation in price is predicted by features.<br/>
   > Ranking from highest to lowest impact on the prices are the following features:
-  * 1. grade
-  * 2. sqft_living
-  * 3. zip\_mean_price
-  * 4. sqft_living15 
-  * 5. sqft_above 
-  * 6. bathrooms
-  > Using only those 6 features for our model would give us a r2 of 0.776 which is nearly as good as the precedent model but a lot more flexible.</br>
+  * 1. *grade*
+  * 2. *sqft_living*
+  * 3. *zip\_mean_price*
+
+3. Can we predict the price of a house based on its most important features?<br>
+  > Using only the 3 features above as arguments we built the function "predict()" that can give an idea of the price of a house in King County depending on its square footage, zipcode and grade</br>
 
 ## Presenting our findings to the Realtor company
 <a href="https://docs.google.com/presentation/d/1fiWHrEDXgNAzFV6xIbLRCp-XWDJjh-3yyQ32P3ClCtg/edit?usp=sharing">Here is the link to our presentation to the realtor company</a>
